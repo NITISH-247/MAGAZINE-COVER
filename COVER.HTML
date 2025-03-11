@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .magazine-cover {
+            width: 400px;
+            height: 600px;
+            background: url('https://source.unsplash.com/400x600/?fashion,style') center/cover;
+            position: relative;
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            overflow: hidden;
+            border: 5px solid #333;
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .headline {
+            position: absolute;
+            bottom: 100px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .caption {
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            font-size: 16px;
+            font-weight: 300;
+            width: 80%;
+        }
+        .decorative-line {
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background: #ffcc00;
+            bottom: 50px;
+            left: 20px;
+        }
+        .magazine-cover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.8));
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-cover">
+        <div class="title">STYLE & TRENDS</div>
+        <div class="headline">The Future of Fashion</div>
+        <div class="caption">Discover the upcoming trends, bold styles, and cutting-edge fashion ideas that are shaping the industry.</div>
+        <div class="decorative-line"></div>
+    </div>
+</body>
+</html>
